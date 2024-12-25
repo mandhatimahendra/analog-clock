@@ -1,0 +1,92 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    height:100vh;
+}
+.clock{
+    color: white;
+    font-size: 50px;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px 0 rgba(0,0,0,0.4);
+    height:200px;
+    width:200px;
+    background-color: rgba(248, 243, 243, 0.911);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock span{
+    position:absolute;
+    transform: rotate(calc(var(--i) * 30deg));
+    color:black;
+    font-size: 10px;
+    font-weight:100;
+    height:180px;
+    font-family: "Roboto";
+    text-align: center;
+    display: inline-block;
+
+}
+.clock span b{
+    display: inline-block;
+    transform: rotate(calc(var(--i) * -30deg));
+    color:black;
+    font-size: 10px;
+    font-weight:bold;
+}
+.clock::before{
+    content: "";
+    height:8px;
+    width:8px;
+    background-color: rgb(105, 101, 101);
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hr-hand{
+    height: 50px;
+    width: 4px;
+    background-color: black;
+    position: absolute;
+    border-radius: 100% 100% 0 0;
+    top:50px;
+    background-color: rgb(112, 102, 102);
+    z-index: 1;
+    transform-origin: 50% 100%;
+    
+}
+.min-hand{
+    height: 70px;
+    width: 3px;
+    background-color: black;
+    position: absolute;
+    border-radius: 100% 100% 0 0;
+    top:30px;
+    background-color: rgb(112, 102, 102);
+    z-index: 2;
+    transform-origin: 50% 100%;
+}
+.sec-hand{
+    height: 70px;
+    width: 2px;
+    background-color: black;
+    position: absolute;
+    border-radius: 100% 100% 0 0;
+    top:30px;
+    background-color: rgb(226, 102, 102);
+    z-index: 3;
+    transform-origin: 50% 100%;
+    
+}
